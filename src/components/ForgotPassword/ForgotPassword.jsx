@@ -44,8 +44,9 @@ const ForgotPassword = () => {
 
 return (
   <>
-      <Card>
-          <Card.Body>
+
+          <div className="login">
+        <div className="loginbody">
               <h2 className='text-center mb-4'>Reset Password</h2>
               
               {error &&   <Alert variant='danger'>{error}</Alert>}
@@ -55,17 +56,19 @@ return (
                       <Form.Label>Email</Form.Label>
                       <Form.Control type='email' ref={emailRef} required/>
                   </Form.Group>                                   
-
+                  <div className="loginbtncontainer">
                   <Button disabled={loading} className='w-100 mt-4' type='submit'>Reset Password</Button>
+                  </div>
               </Form>
 
               <div className='w-100 text-center mt-3'>
-                <Link to="/login">Login</Link>
+                <Link className="logintext" to="/login">Login</Link>
               </div>
-          </Card.Body>
-      </Card>
+
       <div className='w-100 text-center mt-2'>
-          Do not have an account? <Link to="/signup">Sign Up</Link>
+          Do not have an account? <Link  className="logintext" to="/signup">Sign Up</Link>
+      </div>
+      </div>
       </div>
     
   </>

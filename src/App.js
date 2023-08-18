@@ -53,7 +53,6 @@ function App() {
 
                   
                     <Routes>
-                      {/* <Route path='/' element={<Dashboard/>}/> */}
                       <Route  exact path='/dashboard' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}    key='general'  country="in" category="general" />}/> 
                       <Route  exact path='/dashboard/business' element={<News  setProgress={(x)=>setprogress(x)} apikey={apikey}  key='busines'  country="in" category="business" />}/>
                       <Route  exact path='/dashboard/entertainment' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}   key='entertainment' country="in" category="entertainment" />}/>
