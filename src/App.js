@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'
 import Signup from './components/Signup/Signup';
 import { Container } from 'react-bootstrap';
 import AuthProvider, { useAuth } from './Context/AuthContext';
@@ -13,6 +13,7 @@ import { useHistory } from 'react-router-dom';
 import News from './components/News'
 import { useState } from 'react';
 import Error from './components/Error';
+import Navbar from './components/Navbar';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
   
   const [progress,setprogress]=useState(1)
 
-  const apikey = "2bcea9acff804b94ad929cf83618a695"
+  const apikey = "4dc42f9f2b024f22892fd0de8f8c32e1"
   // console.log(load)
 
 
@@ -43,15 +44,16 @@ function App() {
               {
                 !currentUser?(
                   <Routes>
-                    <Route exact path='/' element={<Login/>}/>
+                    <Route exact path='/login' element={<Login/>}/>
                     <Route path="/signup" element={<Signup/>} />
-                    <Route path="/login" element={<Login/>} />
                     <Route path="forgot-password" element={<ForgotPassword/>}/>
                   </Routes>
 
                 ):(
-                  <div className='container'>
+
+                  
                     <Routes>
+                      {/* <Route path='/' element={<Dashboard/>}/> */}
                       <Route  exact path='/dashboard' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}    key='general'  country="in" category="general" />}/> 
                       <Route  exact path='/dashboard/business' element={<News  setProgress={(x)=>setprogress(x)} apikey={apikey}  key='busines'  country="in" category="business" />}/>
                       <Route  exact path='/dashboard/entertainment' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}   key='entertainment' country="in" category="entertainment" />}/>
@@ -60,9 +62,10 @@ function App() {
                       <Route  exact path='/dashboard/sports' element={<News  setProgress={(x)=>setprogress(x)} apikey={apikey}  key='sports'  country="in" category="sports" />}/>
                       <Route  exact path='/dashboard/technology' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}   key='technology'  country="in" category="technology" />}/>
                       <Route path="/update-profile" element={<UpdateProfile/>} />
-                      <Route path='/*' element={<Error/>}/>
+                      <Route path='/' element={<Login/>}/>
                     </Routes>
-                  </div>
+                  
+                  // </div>
 
                 )
 

@@ -24,7 +24,7 @@ const Dashboard = (props) => {
         progress={progress}
         height={3}
       />
-   <Navbar/> 
+
    <div className="container"> 
    <Routes>
    </Routes> 

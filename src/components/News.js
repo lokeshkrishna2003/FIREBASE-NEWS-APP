@@ -4,6 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Loader from './Loader'
 import Navbar from '../components/Navbar'
 
+
 export default function News(props) {
   const [loading, setloading] = useState(false);
   const [data, setdata] = useState({ articles: [], totalResults: 0, page: 1 });
@@ -60,10 +61,11 @@ https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.c
   let defaultcardtext = "go to the website for more news";
   return (
     <>
-      <Navbar/>
+        <Navbar/>
         <h3 className="text mx-3 my-4">---Top-Headlines---</h3>
         <div className="load">{loading === true && <Loader />}</div>
         {/* <div className="items"> */}
+        <div className="container">
           <InfiniteScroll
             dataLength={data.articles.length}
             next={fetchmoredata}
@@ -103,6 +105,7 @@ https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.c
               </div>
             ))}
           </InfiniteScroll>
+          </div>
         {/* </div> */}
       
     </>

@@ -24,10 +24,9 @@ export default function Navbar() {
           await logout();
           // Navigate to login
           // setError("Logout Sucess!!")
-
           setTimeout(() => {
               setError('')
-              navigate("/login")
+              navigate("/")
               
           }, 1000);
           
@@ -97,14 +96,14 @@ export default function Navbar() {
                 </Link>
               </li>
               
-              <div className="form-check form-switch">
+                
+              
+            </ul>
+              <div className="d-flex">
                 <Button className=" btn-primary logoutbtn" onClick={handleLogout}>
                 Logout
                 </Button>
                 </div>
-                
-              
-            </ul>
           </div>
         </div>
       </nav>

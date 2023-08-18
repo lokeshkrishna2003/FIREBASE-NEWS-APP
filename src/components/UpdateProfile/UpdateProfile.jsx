@@ -1,4 +1,4 @@
-import { updateEmail } from 'firebase/auth';
+// import { updateEmail } from 'firebase/auth';
 import React, {useRef, useState} from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -39,7 +39,7 @@ const UpdateProfile = () => {
 
         if (emailRef.current.value && emailRef.current.value !== currentUser.email){
             promises.push(emailUpdate(emailRef.current.value))
-        }else if (emailRef.current.value == currentUser.email){
+        }else if (emailRef.current.value === currentUser.email){
             setLoading(false)
             return setError("Please Add a New Email")
         }
