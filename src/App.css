@@ -25,6 +25,9 @@ body {
     color: rgba(216, 195, 195, 0.822);
     border-color: rgb(223, 204, 166);
   }
+  .card-body{
+    color:antiquewhite;
+  }
   .card-img-top{
     height: 150.35px;
     width: 280.4px;

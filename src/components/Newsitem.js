@@ -3,9 +3,13 @@ import React from "react";
 export default function Newsitem(props) {
   return (
     <>
-      <div className="card" style={{ width: "18rem" }}>
+      <div className="card" style={{ width: "18rem",
+        height:'473.55px',
+        width: '288px' }}>
         <img src={props.urlToImage} className="card-img-top" alt="..." />
-        <div className="card-body">
+        <div className="card-body" style={{
+          color:"antiquewhite"
+        }}>
           <span
             className="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
             style={{
