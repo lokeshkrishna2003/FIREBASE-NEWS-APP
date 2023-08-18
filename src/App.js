@@ -44,24 +44,24 @@ function App() {
               {
                 !currentUser?(
                   <Routes>
-                    <Route exact path='/' element={<Login/>}/>
+                    <Route exact path='/login' element={<Login/>}/>
                     <Route path="/signup" element={<Signup/>} />
-                    <Route path="/forgot-password" element={<ForgotPassword/>}/>
+                    <Route path="forgot-password" element={<ForgotPassword/>}/>
                   </Routes>
 
                 ):(
 
                   
                     <Routes>
-                      <Route  exact path='/dashboard/' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}    key='general'  country="in" category="general" />}/> 
+                      <Route  exact path='/dashboard' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}    key='general'  country="in" category="general" />}/> 
                       <Route  exact path='/dashboard/business' element={<News  setProgress={(x)=>setprogress(x)} apikey={apikey}  key='busines'  country="in" category="business" />}/>
                       <Route  exact path='/dashboard/entertainment' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}   key='entertainment' country="in" category="entertainment" />}/>
                       <Route  exact path='/dashboard/health' element={<News  setProgress={(x)=>setprogress(x)} apikey={apikey}  key='health'  country="in" category="health" />}/>
                       <Route  exact path='/dashboard/science' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}   key='science'  country="in" category="science" />}/>
                       <Route  exact path='/dashboard/sports' element={<News  setProgress={(x)=>setprogress(x)} apikey={apikey}  key='sports'  country="in" category="sports" />}/>
                       <Route  exact path='/dashboard/technology' element={<News setProgress={(x)=>setprogress(x)} apikey={apikey}   key='technology'  country="in" category="technology" />}/>
-                      <Route  path="/update-profile" element={<UpdateProfile/>} />
-                      <Route path='/login' element={<Login/>}/>
+                      <Route path="/update-profile" element={<UpdateProfile/>} />
+                      <Route path='/' element={<Login/>}/>
                     </Routes>
                   
                   
