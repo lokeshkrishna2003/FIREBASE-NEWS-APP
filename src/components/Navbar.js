@@ -26,7 +26,7 @@ export default function Navbar() {
           // setError("Logout Sucess!!")
           setTimeout(() => {
               setError('')
-              navigate("/")
+              navigate("/login")
               
           }, 1000);
           
@@ -40,7 +40,7 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className="navbar navbar-expand-lg ">
+      <nav className="navbar navbar-expand-lg " style={{backgroundColor:'#dce6d9',position:'stickey',top:'2px'}}>
         <div className="container-fluid">
           <h3 className="navbar-brand" >
           <b>SkyLineNews</b>
