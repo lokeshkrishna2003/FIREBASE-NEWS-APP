@@ -62,7 +62,7 @@ return (
               </Form>
 
               <div className='w-100 text-center mt-3'>
-                <Link className="logintext" to="/login">Login</Link>
+                <Link className="logintext" to="/">Login</Link>
               </div>
 
       <div className='w-100 text-center mt-2'>
