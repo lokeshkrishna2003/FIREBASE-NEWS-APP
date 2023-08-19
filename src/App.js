@@ -38,7 +38,7 @@ function App() {
               <Routes>
                 <Route
                   exact
-                  path="/dashboard"
+                  path="/news"
                   element={
                     <News
                       setProgress={(x) => setprogress(x)}
@@ -51,7 +51,7 @@ function App() {
                 />
                 <Route
                   exact
-                  path="/dashboard/business"
+                  path="/news/business"
                   element={
                     <News
                       setProgress={(x) => setprogress(x)}
@@ -64,7 +64,7 @@ function App() {
                 />
                 <Route
                   exact
-                  path="/dashboard/entertainment"
+                  path="/news/entertainment"
                   element={
                     <News
                       setProgress={(x) => setprogress(x)}
@@ -77,7 +77,7 @@ function App() {
                 />
                 <Route
                   exact
-                  path="/dashboard/health"
+                  path="/news/health"
                   element={
                     <News
                       setProgress={(x) => setprogress(x)}
@@ -90,7 +90,7 @@ function App() {
                 />
                 <Route
                   exact
-                  path="/dashboard/science"
+                  path="/news/science"
                   element={
                     <News
                       setProgress={(x) => setprogress(x)}
@@ -103,7 +103,7 @@ function App() {
                 />
                 <Route
                   exact
-                  path="/dashboard/sports"
+                  path="/news/sports"
                   element={
                     <News
                       setProgress={(x) => setprogress(x)}
@@ -116,7 +116,7 @@ function App() {
                 />
                 <Route
                   exact
-                  path="/dashboard/technology"
+                  path="/news/technology"
                   element={
                     <News
                       setProgress={(x) => setprogress(x)}

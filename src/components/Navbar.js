@@ -35,7 +35,7 @@ export default function Navbar() {
       >
         <div className="container-fluid">
           <h3 className="navbar-brand">
-            <b>SkyLineNews</b>
+            <b>News</b>
           </h3>
           <button
             className="navbar-toggler"
@@ -51,38 +51,38 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard">
+                <Link className="nav-link" to="/news">
                   Home
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard/business">
+                <Link className="nav-link" to="/news/business">
                   Business
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard/entertainment">
+                <Link className="nav-link" to="/news/entertainment">
                   Entertainment
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard/health">
+                <Link className="nav-link" to="/news/health">
                   Health
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard/science">
+                <Link className="nav-link" to="/news/science">
                   Science
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard/sports">
+                <Link className="nav-link" to="/news/sports">
                   Sports
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard/technology">
+                <Link className="nav-link" to="/news/technology">
                   Technology
                 </Link>
               </li>

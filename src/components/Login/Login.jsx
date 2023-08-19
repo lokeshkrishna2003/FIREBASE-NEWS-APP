@@ -22,7 +22,7 @@ const Login = () => {
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
 
-      navigate("/dashboard");
+      navigate("/news");
     } catch (error) {
       setError(error.message);
     }
