@@ -90,7 +90,7 @@ export default function Navbar() {
             <div className="d-flex">
               <button
                 type="button"
-                class="btn btn-outline-danger"
+                className="btn btn-outline-danger"
                 onClick={handleLogout}
               >
                 <BsBoxArrowInRight className="icon" /> Log out
