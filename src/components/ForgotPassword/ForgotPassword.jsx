@@ -45,8 +45,8 @@ const ForgotPassword = () => {
 return (
   <>
 
-          <div className="login">
-        <div className="loginbody">
+          <div className="forgot">
+        <div className="forgotbody">
               <h2 className='text-center mb-4'>Reset Password</h2>
               
               {error &&   <Alert variant='danger'>{error}</Alert>}
@@ -56,17 +56,17 @@ return (
                       <Form.Label>Email</Form.Label>
                       <Form.Control type='email' ref={emailRef} required/>
                   </Form.Group>                                   
-                  <div className="loginbtncontainer">
+                  <div className="forgotbtncontainer">
                   <Button disabled={loading} className='w-100 mt-4' type='submit'>Reset Password</Button>
                   </div>
               </Form>
 
               <div className='w-100 text-center mt-3'>
-                <Link className="logintext" to="/">Login</Link>
+                <Link className="forgottext" to="/">Login</Link>
               </div>
 
       <div className='w-100 text-center mt-2'>
-          Do not have an account? <Link  className="logintext" to="/signup">Sign Up</Link>
+          Do not have an account? <Link  className="forgottext" to="/signup">Sign Up</Link>
       </div>
       </div>
       </div>

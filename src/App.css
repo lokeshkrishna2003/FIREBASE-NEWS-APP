@@ -90,6 +90,13 @@ body {
     height: 100vh;
     align-items: center;
   }
+  .forgot{
+    display: flex;
+    flex-direction: coloumn;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+  }
   .login::after{
     content: '';
     background: url(./components/Dashboard/PngItem_132385.png);
@@ -102,6 +109,19 @@ body {
     height: 100vh;
     z-index:-1;
     opacity:0.6;
+  }
+  .forgot::before{
+    content: '';
+    background: url(./components/Dashboard/forgotpassword.jpeg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index:-1;
+    opacity:0.2;
   }
   .signup::after{
     content: '';
@@ -132,6 +152,15 @@ body {
     border-radius: 5%;
     padding: 3px;
   }
+  .forgotbody{
+    border: 2px solid rgb(233, 160, 160);
+    width: 28vw;
+    color: #e1dfe9;
+    background: linear-gradient(to right, #404748, #445151);
+    box-shadow:2px -2px 50px #453338;
+    border-radius: 5%;
+    padding: 3px;
+  }
   .signupbody{
     border: 2px solid rgb(233, 160, 160);
     width: 28vw;
@@ -147,6 +176,12 @@ body {
     justify-content: center;
 margin: 10%;
   }
+  .forgotbtncontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+margin: 10%;
+  }
   .signupbtncontainer{
     display: flex;
     align-items: center;
@@ -157,6 +192,9 @@ margin: 10%;
   .loginbtn{
     width: 100%;
   }
+  .forgotbtn{
+    width: 100%;
+  }
   .signupbtn{
     width: 100%;
   }
@@ -164,13 +202,17 @@ margin: 10%;
     text-decoration: none;
     color: #e28080;
   }
+  .forgottext{
+    text-decoration: none;
+    color: #e28080;
+  }
   .signuptext{
     text-decoration: none;
     color: #e28080;
   }
-  .logoutbtn{
+  /* .logoutbtn{
     float: right;
     border: 2px solid red;
-  }
+  } */
 
   
