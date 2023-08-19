@@ -26,7 +26,7 @@ export default function Navbar() {
           // setError("Logout Sucess!!")
           setTimeout(() => {
               setError('')
-              navigate("/login")
+              navigate("/")
               
           }, 1000);
           
