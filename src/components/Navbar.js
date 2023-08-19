@@ -92,7 +92,8 @@ export default function Navbar() {
                 type="button"
                 class="btn btn-outline-danger"
                 onClick={handleLogout}
-              ><BsBoxArrowInRight className="icon"/> Log out 
+              >
+                <BsBoxArrowInRight className="icon" /> Log out
               </button>
             </div>
           </div>
