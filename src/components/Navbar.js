@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
+import { BsBoxArrowInRight } from "react-icons/bs";
 
 export default function Navbar() {
   const [error, setError] = useState("");
@@ -91,8 +92,7 @@ export default function Navbar() {
                 type="button"
                 class="btn btn-outline-danger"
                 onClick={handleLogout}
-              >
-                LogOut
+              ><BsBoxArrowInRight className="icon"/> Log out 
               </button>
             </div>
           </div>
