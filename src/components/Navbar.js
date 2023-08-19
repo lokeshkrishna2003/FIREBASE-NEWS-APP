@@ -1,9 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../Context/AuthContext';
-
-
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../Context/AuthContext";
 
 export default function Navbar() {
   const [error, setError] = useState("");
@@ -11,36 +9,32 @@ export default function Navbar() {
 
   const { currentUser, logout } = useAuth();
 
-
   const navigate = useNavigate();
 
+  async function handleLogout() {
+    setError("");
+    setLoading(true);
 
-  async function handleLogout(){
-      setError('')
-      setLoading(true)
-
-      try {
-          await logout();
-          setTimeout(() => {
-              setError('')
-              navigate("/")
-              
-          }, 1000);
-          
-          
-      } catch (error) {
-          setError(error)
-
-      }
-      setLoading(false);
-
+    try {
+      await logout();
+      setTimeout(() => {
+        setError("");
+        navigate("/");
+      }, 1000);
+    } catch (error) {
+      setError(error);
+    }
+    setLoading(false);
   }
   return (
     <>
-      <nav className="navbar navbar-expand-lg " style={{backgroundColor:'#dce6d9',position:'stickey',top:'2px'}}>
+      <nav
+        className="navbar navbar-expand-lg "
+        style={{ backgroundColor: "#dce6d9", position: "stickey", top: "2px" }}
+      >
         <div className="container-fluid">
-          <h3 className="navbar-brand" >
-          <b>SkyLineNews</b>
+          <h3 className="navbar-brand">
+            <b>SkyLineNews</b>
           </h3>
           <button
             className="navbar-toggler"
@@ -55,7 +49,6 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              
               <li className="nav-item">
                 <Link className="nav-link" to="/dashboard">
                   Home
@@ -92,13 +85,16 @@ export default function Navbar() {
                   Technology
                 </Link>
               </li>
-              
-                
-              
             </ul>
-              <div className="d-flex">
-                <button type="button" class="btn btn-outline-danger" onClick={handleLogout}>LogOut</button>
-                </div>
+            <div className="d-flex">
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                onClick={handleLogout}
+              >
+                LogOut
+              </button>
+            </div>
           </div>
         </div>
       </nav>

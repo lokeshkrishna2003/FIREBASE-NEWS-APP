@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Newsitem from "../components/Newsitem"
+import Newsitem from "../components/Newsitem";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Loader from './Loader'
-import Navbar from '../components/Navbar'
-
+import Loader from "./Loader";
+import Navbar from "../components/Navbar";
 
 export default function News(props) {
   const [loading, setloading] = useState(false);
@@ -61,53 +60,50 @@ https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.c
   let defaultcardtext = "go to the website for more news";
   return (
     <>
-        <Navbar/>
-        <h3 className="text mx-3 my-4">---Top-Headlines---</h3>
-        <div className="load">{loading === true && <Loader />}</div>
+      <Navbar />
+      <h3 className="text mx-3 my-4">---Top-Headlines---</h3>
+      <div className="load">{loading === true && <Loader />}</div>
 
-        <div className="container">
-          <InfiniteScroll
-            dataLength={data.articles.length}
-            next={fetchmoredata}
-            hasMore={data.articles.length !== data.totalResults}
-            loader={
-              <div className="load">
-                <Loader />
-              </div>
-            }
-          >
-            {data.articles.map((item, index) => (
-              <div className="newsitem" key={index}>
-                <Newsitem
-                  source={item.source.name}
-                  title={
-                    item.title !== null ? item.title.slice(0, 45) + "..." : ""
-                  }
-                  description={
-                    item.description !== null
-                      ? item.description.slice(0, 55) + "..."
-                      : defaultcardtext
-                  }
-                  url={item.url}
-                  urlToImage={
-                    item.urlToImage !== null ? item.urlToImage : defaultimageurl
-                  }
-                  publishedAt={
-                    new Date(item.publishedAt).toGMTString() === null
-                      ? "published recently"
-                      : "Published on " +
-                        new Date(item.publishedAt).toGMTString()
-                  }
-                  author={
-                    item.author === null ? "" : `Published by ${item.author}`
-                  }
-                />
-              </div>
-            ))}
-          </InfiniteScroll>
-          </div>
-
-      
+      <div className="container">
+        <InfiniteScroll
+          dataLength={data.articles.length}
+          next={fetchmoredata}
+          hasMore={data.articles.length !== data.totalResults}
+          loader={
+            <div className="load">
+              <Loader />
+            </div>
+          }
+        >
+          {data.articles.map((item, index) => (
+            <div className="newsitem" key={index}>
+              <Newsitem
+                source={item.source.name}
+                title={
+                  item.title !== null ? item.title.slice(0, 45) + "..." : ""
+                }
+                description={
+                  item.description !== null
+                    ? item.description.slice(0, 55) + "..."
+                    : defaultcardtext
+                }
+                url={item.url}
+                urlToImage={
+                  item.urlToImage !== null ? item.urlToImage : defaultimageurl
+                }
+                publishedAt={
+                  new Date(item.publishedAt).toGMTString() === null
+                    ? "published recently"
+                    : "Published on " + new Date(item.publishedAt).toGMTString()
+                }
+                author={
+                  item.author === null ? "" : `Published by ${item.author}`
+                }
+              />
+            </div>
+          ))}
+        </InfiniteScroll>
+      </div>
     </>
   );
 }

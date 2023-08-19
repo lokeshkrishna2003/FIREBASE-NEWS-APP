@@ -40,20 +40,22 @@ const Login = () => {
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" 
-  className="form-control"
-  autoComplete="username" ref={emailRef} required />
+              <Form.Control
+                type="email"
+                className="form-control"
+                autoComplete="username"
+                ref={emailRef}
+                required
+              />
             </Form.Group>
             <Form.Group id="password">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
                 required
-              
                 className="form-control"
                 autoComplete="current-password"
                 ref={passwordRef}
-              
               />
             </Form.Group>
 
