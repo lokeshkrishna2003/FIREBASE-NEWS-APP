@@ -38,7 +38,7 @@ function App() {
               <Routes>
                 <Route
                   exact
-                  path="/news"
+                  path="/news/home"
                   element={
                     <News
                       setProgress={(x) => setprogress(x)}
