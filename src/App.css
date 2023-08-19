@@ -1,215 +1,207 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  }
-  
-  .card{
-    height:473.55px;
-    background-image: linear-gradient(to right, #2b2929 20%, rgb(31, 35, 29) 100%);
-    width: 288px;
-    padding: 0.2rem;
-    color: rgba(216, 195, 195, 0.822);
-    border-color: rgb(223, 204, 166);
-  }
-  .card-body{
-    color:antiquewhite;
-  }
-  .card-img-top{
-    height: 150.35px;
-    width: 280.4px;
-  }
-  .newsitem{
-    margin: 1rem;
-  
-  }
-  .text{
-    color: rgb(167, 134, 72);
-  
-  text-align: center;
-    z-index: 1;
-  }
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
 
-  
-  .author{
-    color: rgb(83, 215, 184);
-  }
-  .navbar{
-    background-color: #dce6d9;
-  position: fixed;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.card {
+  height: 473.55px;
+  background-image: linear-gradient(
+    to right,
+    #2b2929 20%,
+    rgb(31, 35, 29) 100%
+  );
+  width: 288px;
+  padding: 0.2rem;
+  color: rgba(216, 195, 195, 0.822);
+  border-color: rgb(223, 204, 166);
+}
+.card-body {
+  color: antiquewhite;
+}
+.card-img-top {
+  height: 150.35px;
+  width: 280.4px;
+}
+.newsitem {
+  margin: 1rem;
+}
+.text {
+  color: rgb(167, 134, 72);
+
+  text-align: center;
+  z-index: 1;
+}
+
+.author {
+  color: rgb(83, 215, 184);
+}
+.navbar {
+  background-color: #dce6d9;
+
   width: 100%;
-  border: 4px solid rgb(61, 201, 115);
-  margin: 5px;
+  border: 2px solid rgb(61, 201, 115);
+  margin: 1px;
   border-radius: 5%;
-    top: 100px;
-    z-index: 1;
-  }
-  .load{
-    height: 2vh;
+  top: 100px;
+  z-index: 1;
+}
+.load {
+  height: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  }
-  .load img{
+}
+.load img {
   height: 5vh;
-  }
-  .time{
-    color: #d08952;
-  }
-  
-  .infinite-scroll-component{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 90vw;
-  }
-  .nav-link:focus{
-    color: #a18eef;
-    
-    
-    
-  }
-  .login{
-    display: flex;
-    flex-direction: coloumn;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
-  }
-  .forgot{
-    display: flex;
-    flex-direction: coloumn;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
-  }
-  .login::after{
-    content: '';
-    background: url(./components/Dashboard/PngItem_132385.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    z-index:-1;
-    opacity:0.6;
-  }
-  .forgot::before{
-    content: '';
-    background: url(./components/Dashboard/forgotpassword.jpeg);
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    z-index:-1;
-    opacity:0.2;
-  }
-  .signup::after{
-    content: '';
-    background: url(./components/Dashboard/PngItem_5223487.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    z-index:-1;
-    opacity:0.4;
-  }
-  .signup{
-    display: flex;
-    flex-direction: coloumn;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
-  }
-  .loginbody{
-    border: 2px solid rgb(233, 160, 160);
-    width: 28vw;
-    color: #a18eef;
-    background: linear-gradient(to right, #363b3c, #141e1e);
-    box-shadow:2px -2px 50px #453338;
-    border-radius: 5%;
-    padding: 3px;
-  }
-  .forgotbody{
-    border: 2px solid rgb(233, 160, 160);
-    width: 28vw;
-    color: #e1dfe9;
-    background: linear-gradient(to right, #404748, #445151);
-    box-shadow:2px -2px 50px #453338;
-    border-radius: 5%;
-    padding: 3px;
-  }
-  .signupbody{
-    border: 2px solid rgb(233, 160, 160);
-    width: 28vw;
-    color: #a18eef;
-    background: linear-gradient(to right, #363b3c, #141e1e);
-    box-shadow:2px -2px 50px #453338;
-    border-radius: 5%;
-    padding: 3px;
-  }
-  .loginbtncontainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-margin: 10%;
-  }
-  .forgotbtncontainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-margin: 10%;
-  }
-  .signupbtncontainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-margin: 10%;
+}
+.time {
+  color: #d08952;
+}
 
-  }
-  .loginbtn{
-    width: 100%;
-  }
-  .forgotbtn{
-    width: 100%;
-  }
-  .signupbtn{
-    width: 100%;
-  }
-  .logintext{
-    text-decoration: none;
-    color: #e28080;
-  }
-  .forgottext{
-    text-decoration: none;
-    color: #e28080;
-  }
-  .signuptext{
-    text-decoration: none;
-    color: #e28080;
-  }
+.infinite-scroll-component {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
-
-  
+.login {
+  display: flex;
+  flex-direction: coloumn;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.forgot {
+  display: flex;
+  flex-direction: coloumn;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.login::after {
+  content: "";
+  background: url(./components/Dashboard/PngItem_132385.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.6;
+}
+.forgot::before {
+  content: "";
+  background: url(./components/Dashboard/forgotpassword.jpeg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.2;
+}
+.signup::after {
+  content: "";
+  background: url(./components/Dashboard/PngItem_5223487.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.4;
+}
+.signup {
+  display: flex;
+  flex-direction: coloumn;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.loginbody {
+  border: 2px solid rgb(233, 160, 160);
+  width: 28vw;
+  color: #a18eef;
+  background: linear-gradient(to right, #363b3c, #141e1e);
+  box-shadow: 2px -2px 50px #453338;
+  border-radius: 5%;
+  padding: 3px;
+}
+.forgotbody {
+  border: 2px solid rgb(233, 160, 160);
+  width: 28vw;
+  color: #e1dfe9;
+  background: linear-gradient(to right, #404748, #445151);
+  box-shadow: 2px -2px 50px #453338;
+  border-radius: 5%;
+  padding: 3px;
+}
+.signupbody {
+  border: 2px solid rgb(233, 160, 160);
+  width: 28vw;
+  color: #a18eef;
+  background: linear-gradient(to right, #363b3c, #141e1e);
+  box-shadow: 2px -2px 50px #453338;
+  border-radius: 5%;
+  padding: 3px;
+}
+.loginbtncontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10%;
+}
+.forgotbtncontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10%;
+}
+.signupbtncontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10%;
+}
+.loginbtn {
+  width: 100%;
+}
+.forgotbtn {
+  width: 100%;
+}
+.signupbtn {
+  width: 100%;
+}
+.logintext {
+  text-decoration: none;
+  color: #e28080;
+}
+.forgottext {
+  text-decoration: none;
+  color: #e28080;
+}
+.signuptext {
+  text-decoration: none;
+  color: #e28080;
+}
