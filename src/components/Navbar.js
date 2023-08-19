@@ -26,7 +26,7 @@ export default function Navbar() {
           // setError("Logout Sucess!!")
           setTimeout(() => {
               setError('')
-              navigate("/")
+              navigate("/login")
               
           }, 1000);
           
@@ -100,9 +100,7 @@ export default function Navbar() {
               
             </ul>
               <div className="d-flex">
-                <Button className=" btn-primary logoutbtn" onClick={handleLogout}>
-                Logout
-                </Button>
+                <button type="button" class="btn btn-outline-danger" onClick={handleLogout}>LogOut</button>
                 </div>
           </div>
         </div>

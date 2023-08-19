@@ -29,7 +29,7 @@ function App() {
     // Everything wrapped inside the authProvider to have access to the context
     // Switch determines which router we are currently on
       
-        <div >
+        <div className='div' >
           {/* <Loading/> */}
 
 

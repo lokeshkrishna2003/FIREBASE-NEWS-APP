@@ -42,15 +42,20 @@ body {
   text-align: center;
     z-index: 1;
   }
+
   
   .author{
     color: rgb(83, 215, 184);
   }
   .navbar{
     background-color: #dce6d9;
-    position: sticky;
-    top: 2px;
-    z-index: 2;
+  position: fixed;
+  width: 100%;
+  border: 4px solid rgb(61, 201, 115);
+  margin: 5px;
+  border-radius: 5%;
+    top: 100px;
+    z-index: 1;
   }
   .load{
     height: 2vh;

@@ -27,7 +27,7 @@ export default function Newsitem(props) {
           <p className="card-text">
             <small className="text-body-light author">{props.author} </small>
           </p>
-          <a href={props.url} target="__blank" className="btn btn-primary">
+          <a href={props.url} target="__blank" className="btn btn-outline-info">
             Visit
           </a>
         </div>
