@@ -64,7 +64,7 @@ https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.c
         <Navbar/>
         <h3 className="text mx-3 my-4">---Top-Headlines---</h3>
         <div className="load">{loading === true && <Loader />}</div>
-        {/* <div className="items"> */}
+
         <div className="container">
           <InfiniteScroll
             dataLength={data.articles.length}
@@ -106,7 +106,7 @@ https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.c
             ))}
           </InfiniteScroll>
           </div>
-        {/* </div> */}
+
       
     </>
   );

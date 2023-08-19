@@ -2,28 +2,25 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../Context/AuthContext';
-import { Button } from "react-bootstrap";
+
 
 
 export default function Navbar() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // current user
   const { currentUser, logout } = useAuth();
 
-  // Navigate hook
+
   const navigate = useNavigate();
 
-  // logging out function
+
   async function handleLogout(){
       setError('')
       setLoading(true)
 
       try {
           await logout();
-          // Navigate to login
-          // setError("Logout Sucess!!")
           setTimeout(() => {
               setError('')
               navigate("/")

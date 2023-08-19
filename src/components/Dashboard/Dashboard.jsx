@@ -12,23 +12,13 @@ import {
 
 const Dashboard = (props) => {
 
-    const [progress,setprogress]=useState(1)
 
-    const apikey = "c78a4d691e204a4ab9a73f7c43200638"
 
   return (
     <>
     
-<LoadingBar
-        color='#f11946'
-        progress={progress}
-        height={3}
-      />
 
-   <div className="container"> 
-   <Routes>
-   </Routes> 
-</div>
+
    
     </>
   )

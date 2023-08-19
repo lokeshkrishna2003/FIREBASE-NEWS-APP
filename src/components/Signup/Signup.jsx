@@ -6,7 +6,7 @@ import { useAuth } from '../../Context/AuthContext';
 
 const Signup = () => {
 
-    // Creating the reafs
+
     const emailRef = useRef();
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
@@ -15,28 +15,25 @@ const Signup = () => {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
-    // Navigate Hook
+
     const navigate = useNavigate();
 
-    // console.log(curentUser?)
-
-    // handleSubmit function
     async function handleSubmit(e){
-        // preventing form from refreshing 
+
         e.preventDefault()
 
-        // Doing validation checks
+
         if (passwordRef.current.value !== passwordConfirmRef.current.value){
             return setError('Passwords do not match');
         }
 
-         // calling our signup function and passing in the email and password
+
         try {
             setError('')
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value); 
             
-            // Navigate to dashboard after  signup
+
             navigate("/dashboard");
         } catch (error) {
             setError("Failed to create an account")
@@ -50,7 +47,7 @@ const Signup = () => {
         
     }
 
-    // console.log(curentUser)
+
 
   return (
     <>
