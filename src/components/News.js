@@ -37,24 +37,20 @@ https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.c
   };
 
   const fetchmoredata = async () => {
-    data.page = data.page + 1;
+  setloading(true);
 
-    setloading(true);
+  const nextPage = data.page + 1;
+  const result = await fetch(`
+    https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apikey}&page=${nextPage}&pageSize=${pagesize}`);
+  const resp = await result.json();
 
-    fetch(`
-https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apikey}&page=${data.page}&pageSize=${pagesize}`).then(
-      (result) => {
-        result.json().then((resp) => {
-          setdata({
-            articles: data.articles.concat(resp.articles),
-            page: data.page,
-            totalResults: resp.totalResults,
-          });
-          setloading(false);
-        });
-      }
-    );
-  };
+  setdata(prevData => ({
+    articles: [...prevData.articles, ...resp.articles],
+    page: nextPage,
+    totalResults: resp.totalResults,
+  }));
+  setloading(false);
+};
   let defaultimageurl =
     "https://assets1.cbsnewsstatic.com/hub/i/r/2023/07/15/ff19a689-ba68-43b3-9e30-ad87823a45f1/thumbnail/1200x630/372a214768550161f6b6116442cff0ad/cbsn-fusion-875-million-powerball-jackpot-has-many-feeling-lucky-thumbnail-2129600-640x360.jpg?v=b9ad248140817530b57bedd1355bcccb";
   let defaultcardtext = "go to the website for more news";
