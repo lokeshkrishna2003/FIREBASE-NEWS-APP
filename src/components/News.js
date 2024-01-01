@@ -71,6 +71,7 @@ https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.c
             </div>
           }
         >
+console.log(dataLength)
           {data.articles.map((item, index) => (
             <div className="newsitem" key={index}>
               <Newsitem
